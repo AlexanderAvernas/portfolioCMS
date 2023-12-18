@@ -21,6 +21,7 @@ const SecondPage = () => {
                 itemImage {
                   gatsbyImage(width:250)
                 }
+                slug
               }
             }
           }
@@ -36,7 +37,11 @@ const SecondPage = () => {
         return (
             <div className="portfolioInnerContainer" key={edge.node.id} >
                 <div className="portfolioTextContainer">
-                <h2>{edge.node.title}</h2>
+                <h2>
+                <Link to={`/portfolio/${edge.node.slug}/`}>
+                  {edge.node.title}
+                </Link>
+              </h2>
                 <p>{edge.node.description.description}</p>
                 <ul className="portfolioListContainer">
                     {edge.node.techniques.map((technique, index) => (
