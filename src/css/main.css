@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --ion-color-favorite: #2b2d42; /* Deep Blue */
+    --ion-color-favorite-contrast: #ffffff;
+    --ion-color-favorite-shade: #23253a;
+    --ion-color-favorite-tint: #333554;
+
+    --ion-color-accent: #6b5b95; /* Cosmic Purple */
+    --ion-color-accent-contrast: #ffffff;
+    --ion-color-accent-shade: #5d4e80;
+    --ion-color-accent-tint: #7b6ca5;
+
+    --ion-color-highlight: #8d99ae; /* Celestial Gray */
+    --ion-color-highlight-contrast: #ffffff;
+    --ion-color-highlight-shade: #7c8694;
+    --ion-color-highlight-tint: #9fa9bb;
+
+    --ion-color-background: linear-gradient(90deg, #2b2d42, #6b5b95, #8d99ae); /* Gradient background */
+
+    --ion-color-text: #ffffff; /* White for text */
+    --ion-color-subtext: #a5a5a5; /* Light Gray for subtext */
+  }
+  
+
+/* Custom style footer */
+
+.footerContainer {
+    background-color: var(--ion-color-accent);
+}
+
+.footerColumn {
+    text-align: center;
+}
+
+.footerLink {
+    color: white;
+}
+
+.footerItem {
+    color: white;
+}
+
+.footerItem > a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerCopyright {
+    color: white;
+}
