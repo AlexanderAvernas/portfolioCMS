@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Hakan Gleissman <hakan.gleissman@gmail.com>",
   "dependencies": {
+    "@ionic/react": "^7.6.1",
+    "@ionic/react-router": "^7.6.1",
     "bootstrap": "^5.3.2",
     "gatsby": "^5.12.4",
     "gatsby-plugin-image": "^3.12.0",
