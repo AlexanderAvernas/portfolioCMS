@@ -23,9 +23,54 @@
     --ion-color-text: #ffffff; /* White for text */
     --ion-color-subtext: #a5a5a5; /* Light Gray for subtext */
   }
-  
 
-/* Custom style footer */
+
+  /* ----------------------Styling Porfolio--------------------------- */
+  .portfolioInnerContainer {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4rem 12rem;
+}
+
+.portfolioTextContainer {
+    width: 50%;
+}
+
+.portfolioListContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolioListItem {
+    border: 1px solid black;
+    border-radius: 7px;
+    list-style-type: none;
+    margin: 0.5rem;
+
+}
+
+
+/* Media query for screens with a maximum width of 600px (typical for mobile devices) */
+@media (max-width: 768px) {
+    .portfolioInnerContainer {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolioTextContainer {
+        width: 100%;
+    }
+
+}
+
+
+
+/*----------------Custom style footer----------------------- */
 
 .footerContainer {
     background-color: var(--ion-color-accent);

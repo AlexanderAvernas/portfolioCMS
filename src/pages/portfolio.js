@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 
 //sidans namn blir portfolio efter namnet på javascript-filen
