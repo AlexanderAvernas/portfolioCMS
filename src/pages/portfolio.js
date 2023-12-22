@@ -32,9 +32,9 @@ const SecondPage = () => {
   <Layout>
     <div className="portfolioContainer">
     <h1>Portfolio</h1>
-    {data.allContentfulProfileItem.edges.map((edge) => {
+    {data.allContentfulProfileItem.edges.map((edge, index) => {
         return (
-            <div className="portfolioInnerContainer" key={edge.node.id} >
+            <div className="portfolioInnerContainer" key={index} >
                 <div className="portfolioTextContainer">
                 <h2>
                 <Link to={`/portfolio/${edge.node.slug}/`}>
