@@ -26,6 +26,12 @@ export const data = graphql`
       url
       title
       template
+      description {
+        description
+      }
+      image {
+        gatsbyImage(width:250)
+      }
     }
   }
 `
