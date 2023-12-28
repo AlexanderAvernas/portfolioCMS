@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import HomeTemplate from "../templates/home-template"
 import AboutTemplate from "../templates/about-template"
+import PortfolioTemplate from "../templates/portfolio-template"
 
 const Page = props => {
   const { data } = props
@@ -13,6 +14,8 @@ const Page = props => {
         return <HomeTemplate {...contentfulPage} />
         case 'about':
             return <AboutTemplate {...contentfulPage} />
+        case 'portfolio':
+            return <PortfolioTemplate {...contentfulPage} />
       default:
         return <HomeTemplate {...contentfulPage} />
     }

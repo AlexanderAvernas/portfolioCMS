@@ -8,7 +8,7 @@ import '../css/main.css'
 //sidans namn = namnet på javascript-filen (dock - index.js = sajtens första sida)
 const IndexPage = () => (
   <Layout>
-    <Link to="/portfolio">Se min portfolio</Link>
+    <Link to="/portfolioo">Se min portfolio</Link>
   </Layout>
 )
 //denna konstant sätter titeln på sidan
