@@ -5,8 +5,8 @@ import example from '../images/example.png'
 
 const HomeTemplate = (contentfulPage) => {
   return (
-    <main >
-      <section className='homeContainer'>
+    <main className='homeContainer'>
+      <section className='leftContainer' >
         <svg viewBox="0 0 100 100" className="spinning-circle">
           <path
             id="circlePath"
@@ -30,8 +30,15 @@ const HomeTemplate = (contentfulPage) => {
           </g>
         </svg>
       </section>
-      <Link to="/">Go back to the homepage</Link>
-      <Link to="/portfolio">Se min portfolio</Link>
+      <section className='rightContainer'>
+        <div>
+            <h1>{contentfulPage.title}</h1>
+            <h1>{contentfulPage.description.description}</h1>
+        </div>
+
+      </section>
+      {/* <Link to="/">Go back to the homepage</Link>
+      <Link to="/portfolio">Se min portfolio</Link> */}
     </main>
   );
 };

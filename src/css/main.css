@@ -28,7 +28,7 @@
 
   .headerContainer {
     background-color: var(--ion-color-accent);
-    height: 10vh;
+    height: 8vh;
   }
 
   .headerUlContainer {
@@ -40,6 +40,7 @@
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+
   }
 
   .headerLink {
@@ -209,7 +210,43 @@
     background-color: rgb(112, 158, 199);
     display: flex;
     align-items: center;
+    flex-direction: column;
+    height: 80vh;
+
+
+    @media (min-width: 769px) {
+        flex-direction: row;
+    }
+}
+
+.rightContainer {
+    width: 50vw;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #333554;
+    height: 80vh;
+    width: 100vw;
+
+    @media (min-width: 769px) {
+        width: 40vw;
+
+    }
+}
+
+.leftContainer {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8d99ae;
+    height: 80vh;
+     width: 100vw;
+
+    @media (min-width: 769px) {
+        width: 60vw;
+
+    }
 }
 
 
@@ -217,7 +254,8 @@
 .spinning-circle {
     animation: spin 45s linear infinite;
     overflow-y: hidden;
-    width: 70%;
+    width: 50%;
+    border-radius: 50%;
   }
 
   @keyframes spin {
