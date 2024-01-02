@@ -15,16 +15,19 @@ const AboutTemplate = ( contentfulPage ) => {
             See my resume for more information and experiences.
             <br />
         </p>
-        {/* <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 1.5 }}
-        >
-            <AboutImage src="images/NyCv.JPG" />
-        </motion.div> */}
+        <picture >
+                <source
+                  media="(max-width: 767px)"
+                  srcSet={contentfulPage.image.gatsbyImage.images.fallback.srcSet}
+                />
+                <GatsbyImage
+                  className='aboutImage'
+                  alt="contentfulPage.title"
+                  image={contentfulPage.image.gatsbyImage}
+                />
+              </picture>
         <div>
-        <GatsbyImage className='aboutImage' alt="contentfulPage.title" image={contentfulPage.image.gatsbyImage} ></GatsbyImage>
+        {/* <GatsbyImage className='aboutImage' alt="contentfulPage.title" image={contentfulPage.image.gatsbyImage} ></GatsbyImage> */}
         </div>
     </div>
     <div className='cvContainer'>

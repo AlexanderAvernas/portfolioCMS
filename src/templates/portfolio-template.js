@@ -10,15 +10,18 @@ function PortfolioTemplate( contentfulPage ) {
   return (
     <div>
     <div className="portfolioContainer">
-    <h1>{contentfulPage.title}</h1>
+        <div className="portfolioListTitleContainer">
+    <h1 className='portfolioListTitle'>{contentfulPage.title}</h1>
+    </div>
     {portfolioData.map((edge, index) => {
         return (
-            <div className="portfolioInnerContainer" key={index} >
+
+                <Link className="portfolioInnerContainer"  to={`/portfolio/${edge.node.slug}/`}>
                 <div className="portfolioTextContainer">
                 <h2>
-                <Link to={`/portfolio/${edge.node.slug}/`}>
+
                   {edge.node.title}
-                </Link>
+
               </h2>
                 <p>{edge.node.description.description}</p>
                 <ul className="portfolioListContainer">
@@ -27,15 +30,24 @@ function PortfolioTemplate( contentfulPage ) {
                     ))}
                     </ul>
                     </div>
-                <GatsbyImage alt="edge.node.title" image={edge.node.itemImage.gatsbyImage} ></GatsbyImage>
+                      {/* Använder picture elemet för att anpassa bildstorlek */}
+                    <picture >
+                <source
+                  media="(max-width: 767px)"
+                  srcSet={edge.node.itemImage.gatsbyImage.images.fallback.srcSet}
+                />
+                <GatsbyImage
+                  className='portfolioListImage'
+                  alt={edge.node.title}
+                  image={edge.node.itemImage.gatsbyImage}
+                />
+              </picture>
 
+                </Link>
 
-            </div>
         )
     })}
     </div>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
     </div>
 
   )
