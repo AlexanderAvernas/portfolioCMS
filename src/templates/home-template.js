@@ -7,9 +7,14 @@ const HomeTemplate = (contentfulPage) => {
   return (
     <main className='homeContainer'>
          <section className='leftContainer'>
-        <div>
+        <div className='homeTextContainer'>
+             <h1 className='homeTextsubTitle' >{contentfulPage.description.description}</h1>
             <h1 className='homeText' >{contentfulPage.title}</h1>
-            <h1>{contentfulPage.description.description}</h1>
+            {/* <p className='homeDescritionText'>{contentfulPage.description.description}</p>
+            <div>
+                <button className='homeButton'>Portfolio</button>
+                <button className='homeButton'>About</button>
+            </div> */}
         </div>
 
       </section>
@@ -19,16 +24,16 @@ const HomeTemplate = (contentfulPage) => {
             id="circlePath"
             fill="none"
             strokeWidth="4"
-            stroke="hsl(0 100% 50% / 0.5)"
+            stroke="hsl(0 100% 60% / 0.5)"
             d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
           />
           <text id="text" fontFamily="monospace" fontSize="12" fontWeight="500" fill="var(--text-1)">
             <textPath id="textPath" href="#circlePath">
-              {contentfulPage.title}  {contentfulPage.title}
+            • {contentfulPage.title} •{contentfulPage.subtitle}
             </textPath>
           </text>
           <g>
-            <circle cx="50" cy="50" r="30" fill="white" onClick={() => alert('Button clicked!')} />
+            <circle cx="50" cy="50" r="30" fill="#ffffc5" onClick={() => alert('Button clicked!')} />
             {/* Text inside the button */}
             {/* <text x="50" y="47" textAnchor="middle" dy="4" fill="white" fontSize="4">
               About me

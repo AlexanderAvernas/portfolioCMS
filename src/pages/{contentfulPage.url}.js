@@ -28,6 +28,7 @@ export const data = graphql`
     contentfulPage(id: { eq: $id }) {
       url
       title
+      subtitle
       template
       description {
         description
