@@ -4,18 +4,22 @@ import Layout from "../components/layout"
 import HomeTemplate from "../templates/home-template"
 import AboutTemplate from "../templates/about-template"
 import PortfolioTemplate from "../templates/portfolio-template"
+import ContactTemplate from "../templates/contact-template"
+
 
 const Page = props => {
   const { data } = props
   const { contentfulPage } = data
   const getTemplate = contentfulPage => {
     switch (contentfulPage.template) {
-      case 'home':
+      case 'Home':
         return <HomeTemplate {...contentfulPage} />
-        case 'about':
+        case 'About':
             return <AboutTemplate {...contentfulPage} />
-        case 'portfolio':
+        case 'Portfolio':
             return <PortfolioTemplate {...contentfulPage} />
+        case 'Contact':
+            return <ContactTemplate {...contentfulPage} />
       default:
         return <HomeTemplate {...contentfulPage} />
     }
@@ -29,6 +33,7 @@ export const data = graphql`
       url
       title
       subtitle
+      cvlink
       template
       description {
         description

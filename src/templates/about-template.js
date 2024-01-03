@@ -32,7 +32,7 @@ const AboutTemplate = ( contentfulPage ) => {
     </div>
     <div className='cvContainer'>
         <a
-            href="https://drive.google.com/file/d/1QF2g9Ecs1TU3S5vry5yjnuSh2iHKpUkr/view?usp=sharing"
+            href={contentfulPage.cvlink}
             target="_blank"
             rel="noopener noreferrer"
         >
