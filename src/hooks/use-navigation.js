@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const useNavigation = () => {
   const {allContentfulPage} = useStaticQuery(graphql`
     query {
-      allContentfulPage(sort: {url: ASC}) {
+      allContentfulPage(sort: {createdAt: ASC}) {
         edges {
           node {
             template

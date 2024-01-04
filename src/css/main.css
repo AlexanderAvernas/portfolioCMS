@@ -339,3 +339,28 @@
     background-color: #a5a5a5;
     padding: 5px;
   }
+
+  /* ----------------------------------Contact page--------------------------------------- */
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+
+  .contact-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .contact-details {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  /* Add responsive styles as needed */
+  @media (max-width: 600px) {
+    .contact-container {
+      padding: 20px;
+    }
+  }

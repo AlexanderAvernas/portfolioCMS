@@ -24,7 +24,7 @@ function Footer() {
             <IonItem className="footerItem">
               <IonIcon icon={call} slot="start" />
               Mobile:
-              <a href={`tel:${phoneNumber}`}> {phoneNumber}</a>
+              <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
             </IonItem>
           </IonCol>
           <IonCol size="12" size-md="4" className="footerColumn">
