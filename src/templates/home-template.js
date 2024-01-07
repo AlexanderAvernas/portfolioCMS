@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import '../css/main.css';
-import example from '../images/example.png'
+import vinyl1 from '../images/vinyl1.jpg'
 
 const HomeTemplate = (contentfulPage) => {
   return (
@@ -38,7 +38,7 @@ const HomeTemplate = (contentfulPage) => {
             {/* <text x="50" y="47" textAnchor="middle" dy="4" fill="white" fontSize="4">
               About me
             </text> */}
-            {/* <image x="30" y="30" href={example} height="40" width="40" onClick={() => alert('Button clicked!')} /> */}
+            <image className='homeImage' x="30" y="30" href={vinyl1} height="40" width="40" onClick={() => alert('Button clicked!')} />
           </g>
         </svg>
       </section>

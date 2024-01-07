@@ -33,6 +33,9 @@ export const data = graphql`
       url
       title
       subtitle
+      phonenumber
+      maillink
+      linkedinlink
       cvlink
       template
       description {

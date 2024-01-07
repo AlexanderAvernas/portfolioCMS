@@ -1,9 +1,5 @@
 import React from 'react'
 
-const phoneNumber = "0707237966"
-const email = "alexanderavernas@gmail.com"
-const linkedinProfile =
-  "https://www.linkedin.com/in/alexander-avern%C3%A4s-3aa752251/"
 
 const  ContactTemplate = (contentfulPage) => {
   return (
@@ -13,9 +9,13 @@ const  ContactTemplate = (contentfulPage) => {
       {contentfulPage.description.description}
     </p>
     <div className="contact-details">
-      <p>📞 Phone: <a href={`tel:${phoneNumber}`}></a> {phoneNumber}</p>
-      <p>✉️ Email: <a href={`mailto:${email}`}>{email}</a></p>
-      <p>🔗 LinkedIn: linkedin.com/in/yourprofile</p>
+      <p>📞 Mobile: <a href={`tel:${contentfulPage.phonenumber}`}>{contentfulPage.phonenumber}</a></p>
+      <p>✉️ Email: <a href={`mailto:${contentfulPage.maillink}`}>{contentfulPage.maillink}</a></p>
+      <p>🔗 LinkedIn: <a
+                href={contentfulPage.linkedinlink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >My Profile</a></p>
     </div>
   </div>
   )
