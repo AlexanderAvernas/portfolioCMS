@@ -7,7 +7,7 @@ function Header() {
     const navigationData = useNavigation();
 
     return (
-        <header className="headerContainer">
+        <div className="headerContainer">
           <nav className="headerUlContainer">
             <ul className="headerLinkContainer">
               {navigationData.map(({ node }) => (
@@ -17,7 +17,7 @@ function Header() {
               ))}
             </ul>
           </nav>
-        </header>
+        </div>
       )
     }
 
