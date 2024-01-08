@@ -28,6 +28,7 @@ const BlogPost = props => {
         <div className="singleItemContentContainer">
         <h1>{props.data.contentfulProfileItem.title}</h1>
         <GatsbyImage
+        className="singleItemImage"
           alt="props.data.contentfulProfileItem.title"
           image={props.data.contentfulProfileItem.itemImage.gatsbyImage}
         ></GatsbyImage>
@@ -40,23 +41,13 @@ const BlogPost = props => {
             href={props.data.contentfulProfileItem.itemlink}
             target="_blank"
             rel="noopener noreferrer"
+            className="singleItemLink"
           >
-             <h3>{props.data.contentfulProfileItem.title}</h3>
+             <h4>{props.data.contentfulProfileItem.title}</h4>
           </a>
         </p>
 
         </div>
-        {/* <span className="meta">
-          Posted on {props.data.contentfulBlogPost.publishedDate}
-        </span>
-
-        {props.data.contentfulBlogPost.featuredImage && (
-          <Img
-            className="featured"
-            fluid={props.data.contentfulBlogPost.featuredImage.fluid}
-            alt={props.data.contentfulBlogPost.title}
-          />
-        )} */}
         </div>
       </div>
     </Layout>
