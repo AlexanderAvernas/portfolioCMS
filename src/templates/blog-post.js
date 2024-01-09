@@ -15,7 +15,7 @@ export const query = graphql`
         description
       }
       itemImage {
-        gatsbyImage(layout: CONSTRAINED, width: 250)
+        gatsbyImage(width: 250)
       }
     }
   }

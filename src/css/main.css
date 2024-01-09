@@ -38,11 +38,6 @@ body {
     height: 8vh;
   }
 
-  .headerUlContainer {
-
-
-  }
-
   .headerLinkContainer {
     display: flex;
     justify-content: space-around;
@@ -437,20 +432,6 @@ body {
     font-size: 16px;
     margin-top: 20px;
   }
-
-  /* Add responsive styles as needed */
-  @media (max-width: 600px) {
-    .contact-container {
-
-
-    }
-
-    .contactOutContainer {
-
-
-    }
-  }
-
 
   /* ----------------------------------------------------------------------------------------404NoPageFound-------------------------------------------------------------- */
 
