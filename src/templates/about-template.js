@@ -5,8 +5,11 @@ import { GatsbyImage } from "gatsby-plugin-image"
 const AboutTemplate = ( contentfulPage ) => {
 
   return (
-    <div className='aboutContainer'>
+
+    <main className='aboutContainer'>
+        <div className="aboutHeaderContainer">
     <h1 className='aboutHeader'>{contentfulPage.title}</h1>
+    </div>
     <div className='aboutInfoContainer'>
         <p className='aboutText'>
             {contentfulPage.description.description}
@@ -39,13 +42,8 @@ const AboutTemplate = ( contentfulPage ) => {
             <button className='cvButton'>Resume</button>
         </a>
     </div>
-</div>
+</main>
 
-    // <main>
-
-    //     <h1>{contentfulPage.title}</h1>
-
-    // </main>
   );
 };
 

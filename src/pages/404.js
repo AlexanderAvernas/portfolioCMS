@@ -1,14 +1,22 @@
-import * as React from "react"
+import React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../components/layout';
 
-import Layout from "../components/layout"
-
-//i dev mode overridas denna sida av en inbyggd 404-sida
 const NotFoundPage = () => (
   <Layout>
-    <h1>404: Not Found</h1>
+    <div className="noPageFoundOutContainer">
+    <div className="noPageFoundContainer">
+      <h1 className="noPageFoundTitle">Page not found</h1>
+      <p className="noPageFoundMessage">
+        The page you are looking for might have been removed, had its name changed,
+        or is temporarily unavailable.
+      </p>
+      <Link to="/" className="noPageFoundLink">
+        Go to Home Page
+      </Link>
+    </div>
+    </div>
   </Layout>
-)
+);
 
-export const Head = () => <title>Portfolio Page</title>
-
-export default NotFoundPage
+export default NotFoundPage;

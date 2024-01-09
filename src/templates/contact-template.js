@@ -3,6 +3,7 @@ import React from 'react'
 
 const  ContactTemplate = (contentfulPage) => {
   return (
+    <div className="contactOutContainer">
     <div className="contact-container">
     <h1>{contentfulPage.title}</h1>
     <p className="contact-description">
@@ -17,6 +18,7 @@ const  ContactTemplate = (contentfulPage) => {
                 rel="noopener noreferrer"
               >My Profile</a></p>
     </div>
+  </div>
   </div>
   )
 }

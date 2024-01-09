@@ -1,4 +1,6 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import {
   IonFooter,
   IonGrid,
@@ -10,12 +12,24 @@ import {
 import { call, mail, logoLinkedin } from "ionicons/icons"
 import '../css/main.css'
 
-const phoneNumber = "0707237966"
-const email = "alexanderavernas@gmail.com"
-const linkedinProfile =
-  "https://www.linkedin.com/in/alexander-avern%C3%A4s-3aa752251/"
 
 function Footer() {
+    const data = useStaticQuery(graphql`
+    query {
+      contentfulFooter {
+        title
+        email
+        mobile
+        linkedin
+      }
+    }
+  `)
+
+  const phoneNumber = data.contentfulFooter.mobile
+  const email = data.contentfulFooter.email
+  const linkedinProfile = data.contentfulFooter.linkedin
+
+//   const contentfulFooter = data.allContentfulFooter.edges[0].node;
   return (
     <IonFooter>
       <IonGrid  >
@@ -51,7 +65,7 @@ function Footer() {
         <IonRow class="ion-justify-content-center">
         <IonCol size="12" size-md="12" className="footerColumn">
             <div className="footerCopyright">
-              &copy; {new Date().getFullYear()} AlexanderAvernas
+              &copy; {new Date().getFullYear()} {data.contentfulFooter.title}
             </div>
           </IonCol>
         </IonRow>
