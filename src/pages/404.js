@@ -12,7 +12,7 @@ const NotFoundPage = () => (
         or is temporarily unavailable.
       </p>
       <Link to="/" className="noPageFoundLink">
-        Home Page
+        Go to Home Page
       </Link>
     </div>
     </div>
