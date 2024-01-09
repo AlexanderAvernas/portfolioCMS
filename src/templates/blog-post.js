@@ -31,9 +31,7 @@ const BlogPost = props => {
         className="singleItemImage"
           alt="props.data.contentfulProfileItem.title"
           image={props.data.contentfulProfileItem.itemImage.gatsbyImage}
-        ></GatsbyImage>
-
-
+        />
         <div className="innerItemContent">
         <p>{props.data.contentfulProfileItem.singleitemdescription}</p>
         <p>
