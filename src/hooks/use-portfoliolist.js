@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const usePortfolio = () => {
     const {allContentfulProfileItem} = useStaticQuery(graphql`
     query {
-        allContentfulProfileItem {
+        allContentfulProfileItem (sort: {title: ASC}) {
             edges {
               node{
                 title
