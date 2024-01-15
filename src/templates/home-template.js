@@ -1,9 +1,14 @@
 import * as React from "react"
 import "../css/main.css"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
+
 const HomeTemplate = contentfulPage => {
   return (
     <main className="homeContainer">
+        <Helmet>
+<meta  name='description' content={'Homepage'}/>
+</Helmet>
       <section className="leftContainer">
         <div className="homeTextContainer">
           <h1 className="homeTextsubTitle">

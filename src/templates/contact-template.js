@@ -1,9 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 
 const  ContactTemplate = (contentfulPage) => {
   return (
     <div className="contactOutContainer">
+        <Helmet>
+<meta  name='description' content={'contactpage'}/>
+</Helmet>
     <div className="contact-container">
     <h1>{contentfulPage.title}</h1>
     <p className="contact-description">

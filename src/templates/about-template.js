@@ -1,11 +1,15 @@
 import * as React from 'react';
 import '../css/main.css'
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Helmet } from 'react-helmet';
 
 const AboutTemplate = ( contentfulPage ) => {
 
   return (
-
+<>
+<Helmet>
+<meta  name='description' content={'Aboutpage'}/>
+</Helmet>
     <main className='aboutContainer'>
         <div className="aboutHeaderContainer">
     <h1 className='aboutHeader'>{contentfulPage.title}</h1>
@@ -43,6 +47,7 @@ const AboutTemplate = ( contentfulPage ) => {
         </a>
     </div>
 </main>
+</>
 
   );
 };
