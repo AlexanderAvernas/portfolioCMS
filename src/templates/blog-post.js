@@ -4,6 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 
+// GraphQL query för att hämta data baserat på den angivna slugen
 export const query = graphql`
   query ($slug: String!) {
     contentfulProfileItem(slug: { eq: $slug }) {
@@ -26,26 +27,25 @@ const BlogPost = props => {
     <Layout>
       <div className="singleItemContainer">
         <div className="singleItemContentContainer">
-        <h1>{props.data.contentfulProfileItem.title}</h1>
-        <GatsbyImage
-        className="singleItemImage"
-          alt="props.data.contentfulProfileItem.title"
-          image={props.data.contentfulProfileItem.itemImage.gatsbyImage}
-        />
-        <div className="innerItemContent">
-        <p>{props.data.contentfulProfileItem.singleitemdescription}</p>
-        <p>
-          <a
-            href={props.data.contentfulProfileItem.itemlink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="singleItemLink"
-          >
-             <h4>{props.data.contentfulProfileItem.title}</h4>
-          </a>
-        </p>
-
-        </div>
+          <h1>{props.data.contentfulProfileItem.title}</h1>
+          <GatsbyImage
+            className="singleItemImage"
+            alt="props.data.contentfulProfileItem.title"
+            image={props.data.contentfulProfileItem.itemImage.gatsbyImage}
+          />
+          <div className="innerItemContent">
+            <p>{props.data.contentfulProfileItem.singleitemdescription}</p>
+            <p>
+              <a
+                href={props.data.contentfulProfileItem.itemlink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="singleItemLink"
+              >
+                <h4>{props.data.contentfulProfileItem.title}</h4>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

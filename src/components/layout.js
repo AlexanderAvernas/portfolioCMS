@@ -6,6 +6,7 @@ import Header from "./Header"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
+// StaticQuery används för att hämta data från contentful
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -19,6 +20,8 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  //Använder Helmet med author och title som visas på alla sidor som omsluts av Layout.
 
   return (
     <>

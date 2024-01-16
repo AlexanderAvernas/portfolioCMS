@@ -10,11 +10,11 @@ import {
   IonIcon,
 } from "@ionic/react"
 import { call, mail, logoLinkedin } from "ionicons/icons"
-import '../css/main.css'
+import "../css/main.css"
 
-
+// StaticQuery används för att hämta data från contentful
 function Footer() {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       contentfulFooter {
         title
@@ -29,10 +29,10 @@ function Footer() {
   const email = data.contentfulFooter.email
   const linkedinProfile = data.contentfulFooter.linkedin
 
-//   const contentfulFooter = data.allContentfulFooter.edges[0].node;
+  //   const contentfulFooter = data.allContentfulFooter.edges[0].node;
   return (
     <IonFooter>
-      <IonGrid  >
+      <IonGrid>
         <IonRow className="ion-justify-content-center">
           <IonCol size="12" size-md="4" className="footerColumn">
             <IonItem className="footerItem">
@@ -63,7 +63,7 @@ function Footer() {
           </IonCol>
         </IonRow>
         <IonRow class="ion-justify-content-center">
-        <IonCol size="12" size-md="12" className="footerColumn">
+          <IonCol size="12" size-md="12" className="footerColumn">
             <div className="footerCopyright">
               &copy; {new Date().getFullYear()} {data.contentfulFooter.title}
             </div>

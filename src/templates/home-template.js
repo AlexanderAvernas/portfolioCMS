@@ -3,12 +3,14 @@ import "../css/main.css"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Helmet } from "react-helmet"
 
+// Data från contenful hämtas in från contenful via contentfulPage.url
+// Använder Helmet där jag ger specifik information på denna sida.
 const HomeTemplate = contentfulPage => {
   return (
     <main className="homeContainer">
-        <Helmet>
-<meta  name='description' content={'Homepage'}/>
-</Helmet>
+      <Helmet>
+        <meta name="description" content={"Homepage"} />
+      </Helmet>
       <section className="leftContainer">
         <div className="homeTextContainer">
           <h1 className="homeTextsubTitle">

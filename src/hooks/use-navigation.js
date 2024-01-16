@@ -1,9 +1,11 @@
 import { useStaticQuery, graphql } from "gatsby"
 
+// Anpassad hook för att hämta navigeringsdata med hjälp av GraphQL-fråga
 const useNavigation = () => {
-  const {allContentfulPage} = useStaticQuery(graphql`
+    // Använder useStaticQuery-hook för att utföra en GraphQL-request
+  const { allContentfulPage } = useStaticQuery(graphql`
     query {
-      allContentfulPage(sort: {createdAt: ASC}) {
+      allContentfulPage(sort: { createdAt: ASC }) {
         edges {
           node {
             template
@@ -13,7 +15,7 @@ const useNavigation = () => {
       }
     }
   `)
-  return allContentfulPage.edges;
+  return allContentfulPage.edges
 }
 
-export default useNavigation;
+export default useNavigation

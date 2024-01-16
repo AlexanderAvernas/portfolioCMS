@@ -4,9 +4,12 @@ import usePortfolio from "../hooks/use-portfoliolist"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 
+// Data från contenful hämtas in från contenful via contentfulPage.url
 function PortfolioTemplate(contentfulPage) {
+  //Använder en hook för att hämta data till portofiolistan och mapa ut den.
   const portfolioData = usePortfolio()
 
+  // Använder Helmet där jag ger specifik information på denna sida.
   return (
     <div>
       <div className="portfolioContainer">
