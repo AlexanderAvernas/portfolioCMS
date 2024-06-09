@@ -1,6 +1,6 @@
 import * as React from "react"
 import "../css/main.css"
-import { GatsbyImage } from "gatsby-plugin-image"
+//import { GatsbyImage } from "gatsby-plugin-image"
 import { Helmet } from "react-helmet"
 
 // Data från contenful hämtas in från contenful via contentfulPage.url
@@ -54,10 +54,10 @@ const HomeTemplate = contentfulPage => {
             />
             <foreignObject x="25" y="25" width="50" height="50">
               <div xmlns="http://www.w3.org/1999/xhtml">
-                <GatsbyImage
+                {/* <GatsbyImage
                   alt="image"
                   image={contentfulPage.image.gatsbyImage}
-                />
+                /> */}
               </div>
             </foreignObject>
           </g>
